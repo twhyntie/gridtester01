@@ -1,0 +1,7 @@
+# Simple plot test with CVMFS
+Executable = "/bin/sh"; 
+Arguments = "/cvmfs/cernatschool.gridpp.ac.uk/simpleplot-001-01-01/run.sh";
+StdOutput = "stdout.txt";
+StdError = "stderr.txt";
+OutputSandbox = {"stdout.txt", "stderr.txt", "output.root"};
+#

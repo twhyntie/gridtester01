@@ -1,0 +1,6 @@
+# Job ID files
+*jobIDfile*
+
+# Output
+*.txt
+*output*/
