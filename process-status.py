@@ -39,14 +39,17 @@ if __name__ == "__main__":
     for l in ls:
         if "Current Status:" in l:
             n_jobs += 1
-            if "Done(Success)" in l: n_success += 1
             if "Aborted"       in l: n_aborted += 1
             if "Waiting"       in l: n_waiting += 1
             if "Ready"         in l: n_ready   += 1
             if "Cleared"       in l: n_cleared += 1
             if "Scheduled"     in l: n_sched   += 1
             if "Running"       in l: n_running += 1
-            if "Done"          in l: n_done    += 1
+            if "Done"          in l:
+                if "Done(Success)" in l:
+                    n_success += 1
+                else:
+                    n_done    += 1
 
     print("*--> % 5d jobs were submitted........" % (n_jobs))
     print("*----> Of which % 5d succeeded......." % (n_success))
