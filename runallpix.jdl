@@ -1,0 +1,7 @@
+# Allpix test with CVMFS
+Executable = "/bin/sh";
+Arguments = "/cvmfs/cernatschool.gridpp.ac.uk/allpix-001-00-00/run.sh /cvmfs/cernatschool.gridpp.ac.uk/allpix-001-00-00/Allpix/allpix/macros/LUCID_batch.in ./. gridtest 1000 1000";
+StdOutput = "stdout.txt";
+StdError = "stderr.txt";
+OutputSandbox = {"stdout.txt", "stderr.txt", "H06-W0087_gridtest_0000000001.root", "H09-W0094_gridtest_0000000001.root", "F05-W0087_gridtest_0000000001.root", "H06-W0088_gridtest_0000000001.root", "J08-W0094_gridtest_0000000001.root"};
+#
