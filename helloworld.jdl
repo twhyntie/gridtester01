@@ -1,7 +1,7 @@
-##############Hello World#################
-Executable = "/bin/echo";
-Arguments = "This works!";
-StdOutput = "hello.out";
-StdError = "hello.err";
-OutputSandbox = {"hello.out","hello.err"};
-##########################################
+# The GridPP CVMFS Hello World! JDL file
+Executable = "/bin/sh";
+Arguments = "/cvmfs/cernatschool.gridpp.ac.uk/hello-world_001-00-00/run.sh /cvmfs/cernatschool.gridpp.ac.uk/hello-world_001-00-00";
+StdOutput = "stdout.txt";
+StdError = "stderr.txt";
+OutputSandbox = {"stdout.txt", "stderr.txt"};
+#

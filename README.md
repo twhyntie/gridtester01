@@ -28,7 +28,9 @@ The `submit.sh` script allows you to submit jobs with a given JDL file to
 a WMS site and CE sites you specify. For example, to submit with the RAL
 WMS to QML CEs only, use:
 
-    . submit.sh rl qm helloworld.jdl
+    voms-proxy-init --voms cernatschool.org
+    myproxy-init -d -n
+    . submit.sh rl qm thisworks.jdl
 
 This will produce the job ID file `output_rl_qm.txt`.
 
@@ -51,14 +53,15 @@ with:
 
     glite-wms-job-output -i jobIDfile_rl_qm --dir output_rl_qm
 
-The output files (e.g. `hello.out` and `hello.err` for
-`helloworld.jdl`) will be in the `output_rl_qm` directory.
+The output files (e.g. `stdout.txt` and `stderr.txt` for
+`thisworks.jdl`) will be in the `output_rl_qm` directory.
 
 ##Sample JDL files
 
 A number of sample JDL files are provided:
 
-* `helloworld.jdl`: uses `echo` to output a string;
+* `thisworks.jdl`: uses `echo` to output a string;
+* `helloworld.jdl`: tests the CERN@school CVMFS Hello World! scripts;
 * `runsimpleplot.jdl`: tests the CERN@school CVMFS simpleplot executable;
 * `runallpix.jdl`: tests the CERN@school **Allpix** CVMFS deployment.
 

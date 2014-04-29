@@ -1,0 +1,7 @@
+####################################################
+Executable = "/bin/echo";
+Arguments = "This works!";
+StdOutput = "stdout.txt";
+StdError = "stderr.txt";
+OutputSandbox = {"stdout.txt","stderr.txt"};
+####################################################
