@@ -3,6 +3,8 @@ Grid Tester 01
 
 A small suite of tools to test job submission on the grid.
 
+(Actually, quite a lot of this is done by Ganga.)
+
 ##Requirements
 
 * A valid grid certificate (installed in ~/.globus);
